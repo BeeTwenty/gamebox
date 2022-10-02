@@ -1,4 +1,4 @@
-games = ["madlibs"]
+games = ["madlibs", "pencils"]
 
 
 def game_select():
@@ -9,6 +9,8 @@ def game_select():
     print("Press 'q' to quit the program")
     if selection == "madlibs":
         madlibs()
+    elif selection == "pencils":
+        pencils()
     elif selection == "q":
         exit()
     else:
@@ -33,6 +35,14 @@ def madlibs():
                                                                                             name, food))
     game_select()
 
+
+def pencils():
+    print("||||")
+    print("Your turn!")
+    N = int(input("How many pencils would you like to use: "))
+    player1 = input("Who will be the first (%s, Computer): " % (uname))
+    print("|" * N)
+    print("%s is going first!" % (player1))
 
 print("Hello Welcome!")
 
